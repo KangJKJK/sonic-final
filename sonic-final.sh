@@ -25,7 +25,7 @@ echo -e "${YELLOW}Git을 설치합니다...${NC}"
 sudo apt install -y git
 
 # 존재하는 파일을 삭제하고 다운로드
-echo "Git 저장소 클론 중..."
+echo -e "${YELLOW}Git 저장소 클론 중...${NC}"
 rm -rf ./*
 git clone https://github.com/KangJKJK/sonic-all
 
