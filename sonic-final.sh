@@ -17,11 +17,6 @@ if [ -d "$work" ]; then
     rm -rf "$work"
 fi
 
-# 작업 디렉토리 새로 생성
-echo -e "${YELLOW}새로운 작업 디렉토리 '${work}'를 생성합니다.${NC}"
-mkdir -p "$work"
-cd "$work"
-
 # 파일 다운로드 및 덮어쓰기
 echo -e "${YELLOW}필요한 파일들을 다운로드합니다...${NC}"
 
