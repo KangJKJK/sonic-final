@@ -43,6 +43,14 @@ else
     echo -e "${GREEN}npm이 이미 설치되어 있습니다.${NC}"
 fi
 
+# Node.js 설치
+sudo apt-get update
+sudo apt-get clean
+sudo apt-get autoclean
+sudo apt-get autoremove -y
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
 # Node.js 모듈 설치
 echo -e "${YELLOW}필요한 Node.js 모듈을 설치합니다...${NC}"
 npm install
