@@ -42,6 +42,7 @@ if ! command -v npm &> /dev/null; then
 else
     echo -e "${GREEN}npm이 이미 설치되어 있습니다.${NC}"
 fi
+npm install twisters
 
 # Node.js 설치
 sudo apt-get update
