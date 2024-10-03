@@ -11,12 +11,6 @@ echo -e "${GREEN}Sonic 데일리 퀘스트 스크립트를 시작합니다...${N
 # 작업 디렉토리 설정
 work="/root/sonic-all"
 
-# 기존 작업 디렉토리가 존재하면 삭제
-if [ -d "$work" ]; then
-    echo -e "${YELLOW}작업 디렉토리 '${work}'가 이미 존재하므로 삭제합니다.${NC}"
-    rm -rf "$work"
-fi
-
 # 파일 다운로드 및 덮어쓰기
 echo -e "${YELLOW}필요한 파일들을 다운로드합니다...${NC}"
 
