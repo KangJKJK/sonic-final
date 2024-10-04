@@ -26,7 +26,7 @@ sudo apt install -y git
 
 # Git 클론
 echo -e "${YELLOW}Git 저장소 클론 중...${NC}"
-git clone https://github.com/KangJKJK/sonic-all .
+git clone https://github.com/KangJKJK/sonic-all
 
 # 작업 디렉토리 이동
 echo -e "${YELLOW}작업디렉토리를 이동합니다...${NC}"
