@@ -18,14 +18,14 @@ echo -e "${YELLOW}필요한 파일들을 다운로드합니다...${NC}"
 echo -e "${YELLOW}Git을 설치합니다...${NC}"
 sudo apt install -y git
 
-# 존재하는 파일을 삭제하고 다운로드
-echo -e "${YELLOW}Git 저장소 클론 중...${NC}"
-rm -rf ./*
-git clone https://github.com/KangJKJK/sonic-all
-
 # 작업 디렉토리 이동
 echo -e "${YELLOW}작업디렉토리를 이동합니다...${NC}"
 cd "$work"
+
+# 존재하는 파일을 삭제하고 다운로드
+echo -e "${YELLOW}Git 저장소 클론 중...${NC}"
+rm -rf ./*
+git clone https://github.com/KangJKJK/sonic-all .
 
 # npm 설치 여부 확인
 echo -e "${YELLOW}필요한 파일들을 설치합니다...${NC}"
