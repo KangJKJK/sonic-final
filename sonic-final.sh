@@ -32,17 +32,6 @@ git clone https://github.com/KangJKJK/sonic-all .
 echo -e "${YELLOW}작업디렉토리를 이동합니다...${NC}"
 cd "$work"
 
-# npm 설치 여부 확인
-echo -e "${YELLOW}필요한 파일들을 설치합니다...${NC}"
-if ! command -v npm &> /dev/null; then
-    echo -e "${RED}npm이 설치되지 않았습니다. npm을 설치합니다...${NC}"
-    sudo apt-get update
-    sudo apt-get install -y npm
-else
-    echo -e "${GREEN}npm이 이미 설치되어 있습니다.${NC}"
-fi
-npm install twisters
-
 # Node.js 설치
 sudo apt-get update
 sudo apt-get clean
