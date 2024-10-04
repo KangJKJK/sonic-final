@@ -33,6 +33,7 @@ echo -e "${YELLOW}작업디렉토리를 이동합니다...${NC}"
 cd "$work"
 
 # Node.js 설치
+echo -e "${YELLOW}Node.js를 설치합니다...${NC}"
 sudo apt-get update
 sudo apt-get clean
 sudo apt-get autoclean
@@ -42,7 +43,8 @@ sudo apt-get install -y nodejs
 
 # Node.js 모듈 설치
 echo -e "${YELLOW}필요한 Node.js 모듈을 설치합니다...${NC}"
-npm install
+sudo apt-get install -y npm
+sudo npm install -g npm@latest
 
 # 개인키 입력받기
 read -p "Solana의 개인키를 쉼표로 구분하여 입력하세요: " privkeys
