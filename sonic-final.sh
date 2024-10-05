@@ -32,14 +32,19 @@ git clone https://github.com/KangJKJK/sonic-all
 echo -e "${YELLOW}작업디렉토리를 이동합니다...${NC}"
 cd "$work"
 
-# Node.js 설치
-echo -e "${YELLOW}Node.js를 설치합니다...${NC}"
-sudo apt-get update
-sudo apt-get clean
-sudo apt-get autoclean
-sudo apt-get autoremove -y
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-sudo apt-get install -y nodejs
+# nvm 설치
+echo -e "${YELLOW}nvm을 설치합니다...${NC}"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+
+# nvm 환경 설정
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # nvm script 로드
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # nvm bash_completion 로드
+
+# Node.js LTS 버전 설치
+echo -e "${YELLOW}Node.js LTS 버전을 설치합니다...${NC}"
+nvm install --lts
+nvm use --lts
 
 # Node.js 모듈 설치
 echo -e "${YELLOW}필요한 Node.js 모듈을 설치합니다...${NC}"
