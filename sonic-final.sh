@@ -43,6 +43,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Node.js LTS 버전 설치
 echo -e "${YELLOW}Node.js LTS 버전을 설치합니다...${NC}"
+cd "$work"
 nvm install --lts
 nvm use --lts
 npm install -g npm@latest
