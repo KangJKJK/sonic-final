@@ -56,7 +56,7 @@ sudo npm install -g npm@latest
 # 빌드 도구 설치
 echo -e "${YELLOW}필요한 빌드 도구를 설치합니다...${NC}"
 sudo apt-get install -y build-essential
-sudo npm install -g node-gyp
+npm install -g node-gyp
 
 # Node.js 모듈 설치 및 네이티브 모듈 빌드
 echo -e "${YELLOW}필요한 Node.js 모듈을 설치하고 네이티브 모듈을 빌드합니다...${NC}"
